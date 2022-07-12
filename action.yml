@@ -1,0 +1,19 @@
+name: 'upload2conda'
+description: 'Upload package to anaconda'
+author: 'Jinlong Ru'
+branding:
+  icon: 'package'
+  color: 'green'
+inputs:
+  PYPIPKGNAME:
+    description: 'name of the pypi package'
+    required: true
+  AnacondaToken:
+    description: 'Anaconda access Token'
+    required: true
+  CONDADIR:
+    description: 'folder that contains meta.yaml'
+    default: ''
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
